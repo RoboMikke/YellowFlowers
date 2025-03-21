@@ -1328,21 +1328,36 @@ body {
   -webkit-animation-play-state: paused !important;
           animation-play-state: paused !important;
 }
+
+.text1 {
+    color: #6bf0ff;
+    font-family: cursive;
+    font-size: 18px;
+}
     </style>
 </head>
 <body>
+    <audio id="miAudio" src="music.mp3"></audio>
 <body class="not-loaded">
-
+    
     <div class="flor-container">
         <div class="flor"></div>
-        <div class="nombre" id="nombre"></div>
     </div>
-    <div class="night"></div>
+    <div class="night">
+        <div class="flower__leafs flower__leafs--1" id="nombre">
+            <br>
+            <center>
+                <p class="text1">Hoy no me es posible estar contigo… sin embargo...</p>
+                <p class="text1">No quería que te faltaran unas flores amarillas. 🌼</p>
+                <p class="text1">Dicen que traen un poquito de alegría… </p>
+                <p class="text1">Deseo que estas llenen tu día de júbilo. 💛</p>
+            </center>
+        </div>
+    </div>
 
 
 
     <div class="flowers">
-
         
       <div class="flower flower--1">
         <div class="flower__leafs flower__leafs--1">
@@ -1642,7 +1657,11 @@ body {
   </body>
 </body>
 <script>   
+
 onload = () => {
+  const audio = document.getElementById('miAudio');
+  audio.play()
+
   const c = setTimeout(() => {
     document.body.classList.remove("not-loaded");
     clearTimeout(c);
@@ -1651,11 +1670,4 @@ onload = () => {
 
 </script>
 
-<script>
-    // JavaScript para mostrar gradualmente el nombre
-    const nombreElement = document.getElementById('nombre');
-    setTimeout(() => {
-        nombreElement.style.opacity = '0';
-    }, 3000); // 3000ms (3 segundos) coincide con la duración de la animación
-</script>
 </html>
